@@ -1,0 +1,48 @@
+#ifndef TEMPERATURE_H
+#define TEMPERATURE_H
+
+class Temperature
+{
+
+private:
+	//float temp;char scale;	//ambos privados
+public:
+	char scale;float temp;	//ambos publicos
+	Temperature();	//constructor
+	Temperature(float,char);
+
+	void toFahrenheit(void);
+	void toKelvin(void);
+	void toCelsius(void);
+	
+
+	float getValue(void);
+	char getScale(void);
+
+	void setValue(float);
+	void setScale(char);
+};
+
+#endif // TEMPERATURE_H
+
+/*
+1. 1 pt. Dise ̃ne la clase Temperature. Dicha clase debe contar con atributos y m ́etodos que
+permitan realizar lo siguiente:
+a) Crear un objeto de la clase Temperature e inicializarlo con un valor espec ́ıfico de tem-
+peratura (un n ́umero real) y una escala (un caracter que debe ser F, C o K dependiendo si
+la temperatura est ́a en grados Fahrenheit, Centigrados o Kelvin). Si se omiten par ́ametros
+de inicializaci ́on, estos deber ́an ser inicializados a 0 grados cent ́ıgrados por defecto.
+b) Se deben implementar los siguientes m ́etodos: toFahrenheit() (convertir temperatu-
+ra a Fahrenheit), toKelvin() (convertir a Kelvin), toCelsius() (convertir a grados
+Celsius). Adem ́as, implemente el m ́etodo getValue() para obtener el valor de la tem-
+peratura y getScale(), el cual debe retornar la escala (F, C o K) en la que se trabaja la
+temperatura.
+Escriba un programa (caso de prueba) que ilustre los m ́etodos de la clase. Un caso de prueba
+podr ́ıa ser el siguiente:
+Ingrese la temperatura a convertir:
+32.0F
+La conversi ́on es:
+32.00F
+0.00C
+273.15K
+*/
